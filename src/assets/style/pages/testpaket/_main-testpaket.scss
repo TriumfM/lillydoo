@@ -1,0 +1,90 @@
+.lil-taskpaket{
+
+  &__entry {
+    display: flex;
+    background: url('../images/lillydoo-testpaket-header-large.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    min-height: 500px;
+    position: relative;
+  }
+
+  &__certificate {
+    position: absolute;
+    top: 45px;
+    right: 45px;
+    width: 200px;
+  }
+
+  &__discover {
+    padding: 40px;
+    width: 500px;
+    align-self: center;
+    justify-self: right;
+    text-align: center;
+
+    &-label {
+      text-align: center;
+      font-size: 42px;
+    }
+  }
+
+  &__button {
+    margin-top: 20px;
+  }
+
+  &__functions {
+    background: $lil-grey-light;
+    padding: 30px 0px;
+
+    &--title {
+
+    }
+
+    &--items {
+      width: calc(100% - 160px);
+      margin: 0px 80px;
+      display: flex;
+
+      .lil__item {
+        width: 33.3%;
+        padding: 60px 20px 40px;
+        text-align: center;
+
+        &--img {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        &--title {
+          display: inline-block;
+          vertical-align: middle;
+          width: 100%;
+          margin-top: 20px;
+          font-size: 17px;
+          font-weight: 600;
+        }
+
+        &--description {
+          display: inline-block;
+          vertical-align: middle;
+          padding: 0px 50px;
+          font-size: 15px;
+          margin-top: 20px;
+          text-align: center;
+          font-weight: 400;
+        }
+
+        &--link {
+          display: inline-block;
+          vertical-align: middle;
+          width: calc(100% - 100px);
+          font-size: 15px;
+          margin-top: 30px;
+          padding: 0px 50px;
+        }
+      }
+    }
+  }
+}
+
