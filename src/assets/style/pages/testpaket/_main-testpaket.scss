@@ -4,7 +4,8 @@
     display: flex;
     background: url('../images/lillydoo-testpaket-header-large.jpg');
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
+    background-position: center;
     min-height: 500px;
     position: relative;
   }
@@ -13,7 +14,8 @@
     position: absolute;
     top: 45px;
     right: 45px;
-    width: 200px;
+    width: 14%;
+    min-width: 150px;
   }
 
   &__discover {
@@ -38,12 +40,12 @@
     padding: 30px 0px;
 
     &--title {
-
     }
 
-    &--items {
-      width: calc(100% - 160px);
-      margin: 0px 80px;
+    &--items {;
+      margin: 0 auto;
+      max-width: $max-width;
+      width: 100%;
       display: flex;
 
       .lil__item {
@@ -82,6 +84,170 @@
           font-size: 15px;
           margin-top: 30px;
           padding: 0px 50px;
+        }
+      }
+    }
+  }
+
+  &__products {
+    padding: 50px 0px;
+
+    &--title {
+    }
+
+    &--items {
+      margin: 0 auto;
+      max-width: $max-width;
+      width: 100%;
+      display: flex;
+
+      .lil__product {
+        width: 50%;
+        padding: 80px 20px 40px;
+        display: flex;
+
+        &--img {
+          width: 25%;
+          max-width: 150px;
+          margin-right: 20px;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        &--description {
+          width: 75%;
+
+          &-title {
+            width: 100%;
+            font-size: 17px;
+            font-weight: 600;
+          }
+
+          &-content {
+            font-size: 15px;
+            margin-top: 20px;
+            margin-left: 20px;
+            font-weight: 400;
+
+          }
+        }
+      }
+    }
+  }
+
+  &__main-product {
+    display: flex;
+    margin: 0px auto;
+    max-width: $max-width;
+    width: 100%;
+
+    &--photo {
+      width: 55%;
+      position: relative;
+      padding: 20px 0px 50px 30px;
+
+      &-img {
+        width: 100%;
+        min-width: 400px;
+        max-width: 650px;
+      }
+
+      &-certificate {
+        position: absolute;
+        top: 45px;
+        left: 50px;
+        width: 30%;
+        min-width: 150px;
+      }
+
+    }
+
+    &--description {
+      width: calc(45% - 70px);
+      min-width: 350px;
+      margin-left: 70px;
+      padding: 60px 30px 60px 0px;
+
+
+      .details {
+        width: 100%;
+        font-size: 15px;
+        position: relative;
+        height: 100%;
+
+        &__title {
+        }
+
+        &__button-section {
+          width: 100%;
+          float: left;
+          margin: 15px 0px 30px;
+
+          &--title {
+            font-size: 16px;
+            width: 100%;
+            padding-bottom: 15px;
+            float: left;
+          }
+
+          &--buttons {
+            list-style: none;
+            float: left;
+            display: flex;
+            width: 100%;
+
+            .lil__main-product--button {
+              width: 20%;
+              text-align: center;
+              border: 1px solid $lil-grey;
+              padding: 10px 5px 5px;
+              color: $lil-grey;
+              margin-right: 10px;
+              cursor: pointer;
+              font-weight: 600;
+
+              &.active, &:hover {
+                background-color: $lil-baby-blue;
+                border-color: $lil-baby-blue;
+                color: white;
+              }
+
+              .order {
+                font-size: 20px;
+              }
+              .type {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+
+        &__content {
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 1.4;
+          margin-bottom: 60px;
+          float: left;
+
+          &--summary {
+            float: left;
+          }
+
+          &--list{
+            padding-top: 20px;
+            margin-left: 15px;
+            float: left;
+          }
+        }
+
+        &--button {
+          float: left;
+          bottom: 70px;
+          width: 100%;
+          border: none;
+          max-width: 100%;
         }
       }
     }
