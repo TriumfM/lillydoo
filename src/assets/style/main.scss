@@ -1,0 +1,32 @@
+// Components
+@import 'components/fonts';
+@import 'components/variables';
+@import 'components/buttons';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/links';
+@import 'components/align';
+
+
+// Helpers
+
+
+// Pages
+@import 'pages/testpaket/main-testpaket';
+
+// Responsive
+@import 'responsive/testpaket/main-testpaket';
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: $lil-font, $helvetic-light, $roboto-regular, Arial, sans-serif;
+}
+
+.lil-cursor__default {
+  cursor: default;
+}
+

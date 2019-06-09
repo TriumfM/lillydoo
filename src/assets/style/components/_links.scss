@@ -1,0 +1,15 @@
+.lil-app {
+
+  &__link {
+    cursor: pointer;
+    color: $lil-link;
+
+    &:hover {
+      text-decoration: none !important;
+    }
+
+    &:focus {
+      text-decoration: none !important;
+    }
+  }
+}
