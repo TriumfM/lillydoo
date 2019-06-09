@@ -2,36 +2,6 @@
   .lil-taskpaket{
     display: block;
 
-    &__entry {
-      min-height: 550px;
-      background: url('../images/lillydoo-testpaket-header-sm.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-
-    &__certificate {
-      display: none;
-    }
-
-    &__discover {
-      margin: 100px auto;
-      padding: 0;
-      width: 100%;
-      align-self: start;
-
-      &-label {
-        text-align: center;
-        font-size: 32px;
-      }
-    }
-
-    &__button {
-      margin-top: 40px;
-      min-width: auto;
-      width: auto;
-    }
-
     &__functions {
       float: left;
 
