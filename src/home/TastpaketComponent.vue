@@ -1,17 +1,9 @@
 <template class="lil-app__content">
   <div class="lil-taskpaket">
-
-    <section class="lil-taskpaket__entry">
-      <img class="lil-taskpaket__certificate" src="@/assets/images/oekotex_de.png"/>
-      <div class="lil-taskpaket__discover">
-        <span class="lil-taskpaket__discover-label">Entdecke unsere Hautfreundlichkeit</span>
-        <a class="lil-button lil-taskpaket__button"> Jetzt Deine Größe wählen</a>
-      </div>
-    </section>
-
+    <header-component></header-component>
     <section class="lil-taskpaket__main-product">
       <div class="lil-taskpaket__main-product--photo">
-        <img class="lil-taskpaket__main-product--photo-img" src="@/assets/images/lightblue_lightblue.jpg"/>
+        <img class="lil-taskpaket__main-product--photo-img" :src="item.img"/>
         <img class="lil-taskpaket__main-product--photo-certificate" src="@/assets/images/oekotex_de.png"/>
       </div>
       <div class="lil-taskpaket__main-product--description">
@@ -20,23 +12,23 @@
           <div class="details__button-section">
             <span class="details__button-section--title">WÄHLE DEINE GRÖSSE</span>
             <ul class="details__button-section--buttons">
-              <li class="lil__main-product--button">
+              <li class="lil__main-product--button" :class="{'active': item.category == 1}" @click="changeType(0)">
                 <p class="order">1</p>
                 <p class="type">(2-3 KG)</p>
               </li>
-              <li class="lil__main-product--button">
+              <li class="lil__main-product--button" :class="{'active': item.category == 2}" @click="changeType(1)">
                 <p class="order">2</p>
                 <p class="type">(3-4 KG)</p>
               </li>
-              <li class="lil__main-product--button">
+              <li class="lil__main-product--button" :class="{'active': item.category == 3}" @click="changeType(2)">
                 <p class="order">3</p>
                 <p class="type">(4-7 KG)</p>
               </li>
-              <li class="lil__main-product--button">
+              <li class="lil__main-product--button" :class="{'active': item.category == 4}" @click="changeType(3)">
                 <p class="order">4</p>
                 <p class="type">(7-10 KG)</p>
               </li>
-              <li class="lil__main-product--button">
+              <li class="lil__main-product--button" :class="{'active': item.category == 5}" @click="changeType(4)">
                 <p class="order">5</p>
                 <p class="type">(10-12 KG)</p>
               </li>
@@ -59,7 +51,6 @@
         </div>
       </div>
     </section>
-
     <section class="lil-taskpaket__functions">
       <h2 class="lil-taskpaket__functions--title lil-align lil-align--h-center">Wie es funktioniert</h2>
       <div class="lil-taskpaket__functions--items">
@@ -102,7 +93,7 @@
             <img src="@/assets/images/windeln.jpg"/>
           </div>
           <div class="lil__product--description">
-            <span class="lil__product--description-title">10 LILLYDOO WINDELN</span>
+            <span class="lil__product--description-title">{{item.diapers}}</span>
             <div class="lil__product--description-content">
             <ul>
               <li>0 % Parfüme & Lotionen, 100 % LILLYDOO Schutz</li>
@@ -113,10 +104,10 @@
         </div>
         <div class="lil__product">
           <div class="lil__product--img">
-            <img src="@/assets/images/sensitive-wipes_one.jpg"/>
+            <img :src="item.type_wipes"/>
           </div>
           <div class="lil__product--description">
-            <span class="lil__product--description-title">10 LILLYDOO WINDELN</span>
+            <span class="lil__product--description-title">{{item.wipes}}</span>
             <div class="lil__product--description-content">
               <ul>
                 <li>0 % Parfüme & PEGs, 100 % biologisch abbaubar</li>
@@ -131,10 +122,62 @@
 </template>
 
 <script>
+  import HeaderComponent from '@/helpers/HeaderComponent'
+
   export default {
     data: () => ({
+      item: {
+        img: 'https://www.lillydoo.com/bundles/lillydooweb/img/trialbox/lillydoo-testpaket-10.jpg?1559833344',
+        category: '1',
+        type_wipes: 'https://www.lillydoo.com/bundles/lillydooweb/img/products/wipes/water-wipes-15-small.jpg?1559833344',
+        diapers: '10 LILLYDOO DIAPERS',
+        wipes: '15 WET WIPES WITH 99% WATER'
+      },
+      items: [
+        {
+          img: 'https://www.lillydoo.com/bundles/lillydooweb/img/trialbox/lillydoo-testpaket-10.jpg?1559833344',
+          category: '1',
+          type_wipes: 'https://www.lillydoo.com/bundles/lillydooweb/img/products/wipes/water-wipes-15-small.jpg?1559833344',
+          diapers: '10 LILLYDOO DIAPERS',
+          wipes: '15 WET WIPES WITH 99% WATER'
+        },
+        {
+          img: 'https://www.lillydoo.com/bundles/lillydooweb/img/trialbox/lillydoo-testpaket-20.jpg?1559833344',
+          category: '2',
+          type_wipes: 'https://www.lillydoo.com/bundles/lillydooweb/img/products/wipes/water-wipes-15-small.jpg?1559833344',
+          diapers: '10 LILLYDOO DIAPERS',
+          wipes: '15 WET WIPES WITH 99% WATER'
+        },
+        {
+          img: 'https://www.lillydoo.com/bundles/lillydooweb/img/trialbox/lillydoo-testpaket-30.jpg?1559833344',
+          category: '3',
+          type_wipes: 'https://www.lillydoo.com/bundles/lillydooweb/img/products/wipes/water-wipes-15-small.jpg?1559833344',
+          diapers: '10 LILLYDOO DIAPERS',
+          wipes: '15 WET WIPES WITH 99% WATER'
+        },
+        {
+          img: 'https://www.lillydoo.com/bundles/lillydooweb/img/trialbox/lillydoo-testpaket-40.jpg?1559833344',
+          category: '4',
+          type_wipes: 'https://www.lillydoo.com/bundles/lillydooweb/img/products/wipes/sensitive-wipes-15-small.jpg?1559833344',
+          diapers: '10 LILLYDOO DIAPERS',
+          wipes: '10 LILLYDOO WINDELN'
+        },
+        {
+          img: 'https://www.lillydoo.com/bundles/lillydooweb/img/trialbox/lillydoo-testpaket-50.jpg?1559833344',
+          category: '5',
+          type_wipes: 'https://www.lillydoo.com/bundles/lillydooweb/img/products/wipes/sensitive-wipes-15-small.jpg?1559833344',
+          diapers: '10 LILLYDOO DIAPERS',
+          wipes: '10 LILLYDOO WINDELN'
+        }
+      ]
     }),
+    components: {
+      HeaderComponent
+    },
     methods: {
+      changeType: function (item) {
+        this.item =  this.items[item]
+      }
     }
   }
 </script>
