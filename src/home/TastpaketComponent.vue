@@ -160,14 +160,14 @@
           category: '4',
           type_wipes: 'https://www.lillydoo.com/bundles/lillydooweb/img/products/wipes/sensitive-wipes-15-small.jpg?1559833344',
           diapers: '10 LILLYDOO DIAPERS',
-          wipes: '10 LILLYDOO WINDELN'
+          wipes: '15 SENSITIVE WET WIPES'
         },
         {
           img: 'https://www.lillydoo.com/bundles/lillydooweb/img/trialbox/lillydoo-testpaket-50.jpg?1559833344',
           category: '5',
           type_wipes: 'https://www.lillydoo.com/bundles/lillydooweb/img/products/wipes/sensitive-wipes-15-small.jpg?1559833344',
           diapers: '10 LILLYDOO DIAPERS',
-          wipes: '10 LILLYDOO WINDELN'
+          wipes: '15 SENSITIVE WET WIPES'
         }
       ]
     }),
