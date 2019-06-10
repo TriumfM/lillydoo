@@ -12,7 +12,7 @@
 
     &__discover {
       margin: 100px auto;
-      padding: 0;
+      padding: 0px 40px;
       width: 100%;
       align-self: start;
 
@@ -30,7 +30,7 @@
   }
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: $screen-xs){
   .header {
     background: url('../images/lillydoo-testpaket-header-sm.png');
     background-repeat: no-repeat;
