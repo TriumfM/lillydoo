@@ -1,6 +1,6 @@
 # lillydoo
 
-> A Vue.js project
+> A Vue.js project for Lillydoo
 
 ## Build Setup
 
